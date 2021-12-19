@@ -1,0 +1,35 @@
+.block-form {
+    width: 800px;
+    min-height: auto;
+    margin: 0 auto;
+    margin-top: 64px;
+}
+.title-main {
+    margin-top: 64px;
+}
+.image-main {
+    width: 360px;
+    height: 300px;
+}
+.image-go {
+    width: 360px;
+    height: 300px;
+}
+.image-block {
+    margin-top: 32px;
+}
+.block-go {
+    margin-top: 32px;
+}
+.main-block {
+    display: block;
+}
+.white {
+    text-decoration: none;
+    color: #000000;
+}
+.white:hover {
+    color: red;
+    text-decoration: none;
+}
+

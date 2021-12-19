@@ -1,0 +1,37 @@
+{{ define "index" }}
+
+{{ template "header"}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8">
+            <h1 class="title-main">Some Blog</h1>
+            <img class="image-main" src="https://get.foundation/assets/img/mascots/inky-template.svg" alt="img">
+            <h2>Responsive design gets a whole lot faster</h2>
+            <p>A Framework for any device, medium, and accessibility. Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device. Foundation is semantic, readable, flexible, and completely customizable. We’re constantly adding new resources and code snippets, including these handy HTML templates to help get you started!</p>
+
+        </div>
+        <div class="block-go">
+            <img class="image-go" src="https://get.foundation/assets/img/mascots/responsive-through-and-through.svg" alt="image">
+            <h2>Sites</h2>
+            <p>Foundation for Sites is jam-packed with features to help people rapidly build content-focused websites. Foundation for Sites provides you with HTML, CSS, & JavaScript to help you quickly prototype. It's easy to customize & extend to get your project polished & shipped.
+                Our email framework helps you craft responsive HTML emails that can be read anywhere on any device.</p>
+
+        </div>
+    </div>
+    {{ range $key, $value := . }}
+    <div class="row">
+        <div class="col-xs-8">
+            <h1><a href="/edit?id={{$key}}">{{$value.Title}}</a></h1>
+            {{ $value.Content }}
+        </div>
+    </div>
+        {{ end }}
+</div>
+
+
+{{ template "footer" }}
+
+{{ end }}
