@@ -1,7 +1,4 @@
 
-{{ define "write"}}
-{{ template "header"}}
-
 <div class="block-form">
     <h1>New Post</h1>
     <form action="/SavePost" method="POST">
@@ -16,11 +13,8 @@
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
         {{if .Id}}
-            <a class="white" href="/delete?id={{.Id}}">Delete</a>
+            <a class="white" href="/delete/{{.Id}}">Delete</a>
         {{end}}
     </form>
 
 </div>
-
-{{ template "footer"}}
-{{ end}}

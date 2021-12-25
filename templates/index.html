@@ -1,6 +1,4 @@
-{{ define "index" }}
 
-{{ template "header"}}
 
 <div class="container">
     <div class="row">
@@ -24,14 +22,9 @@
     {{ range $key, $value := . }}
     <div class="row">
         <div class="col-xs-8">
-            <h1><a href="/edit?id={{$key}}">{{$value.Title}}</a></h1>
+            <h1><a href="/edit/{{$key}}">{{$value.Title}}</a></h1>
             {{ $value.Content }}
         </div>
     </div>
         {{ end }}
 </div>
-
-
-{{ template "footer" }}
-
-{{ end }}
